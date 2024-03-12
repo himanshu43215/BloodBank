@@ -19,7 +19,7 @@ public class AdminController {
 
     @GetMapping("/{adminId}/{adminPassword}")
     public ResponseEntity<Admin> getByAdminIdAndAdminPassword(@PathVariable("adminId") String adminId, @PathVariable("adminPassword") String adminPassword) {
-        log.info("getByAdminIdAndAdminPassword() method of AdminController is called");
+        log.info("getByAdminIdAndAdminPassword() This method called AdminController");
         Admin receiveAdmin = adminService.getByAdminIdAndAdminPassword(adminId, adminPassword);
         return new ResponseEntity<>(receiveAdmin, HttpStatus.OK);
     }
